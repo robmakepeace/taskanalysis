@@ -95,7 +95,7 @@ each packet conatins one line of ten values seperated by spaces
 ![axes](http://api.ning.com/files/ujcza9N5GbLOvcS-JInsBpRV0AGAiG*gDri3wvh0kL-jjJzfmOtNXME8M7vBNz8D6n09ZRxZll248F4SEgNWnVYvtFnEALGy/MPU9150axis.png)
 
 Sample Data:
-![sample](/Documents/bluetooth.png)
+![sample](/Documents/Bluetooth_screenshot.png)
 
 ### Computer End
 
