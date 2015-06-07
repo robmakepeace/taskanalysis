@@ -14,6 +14,10 @@ Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movemen
 
 ## Hardware
 
+![Photo](Documents/package.jpg)
+
+Device Prototype (From Left to Right: Bluetooth, IMU, Microcontroller)
+
 ### Bill of Materials
 | Item            | Part Number | Manufacturer | Cost | Source |
 | --------------- | ----------- | ------------ | ---- | ------ |
@@ -32,7 +36,11 @@ Pinout:
 
 IMU -> Arduino on I2C (accelgyro.initialize(); accelgyro.getMotion9(&ax, &ay, &az, &gx, &gy, &gz, &mx, &my, &mz);)
 
+[Datasheet](Documents/PS-MPU-9150A.pdf)
+
 Arduino -> Bluetooth on Serial (baud 38400 bits/sec) (Note: Arduino has two serial connections "Serial" is the usb back to the pc, "Serial1" is on pins 0 & 1)
+
+[Datasheet](Documents/bluetooth hc06.pdf)
 
 The battery voltage is 3.7V, it is input into the RAW pin on the arduino to make 3.3V that is used for everything else.
 
@@ -86,6 +94,9 @@ each packet conatins one line of ten values seperated by spaces
 
 ![axes](http://api.ning.com/files/ujcza9N5GbLOvcS-JInsBpRV0AGAiG*gDri3wvh0kL-jjJzfmOtNXME8M7vBNz8D6n09ZRxZll248F4SEgNWnVYvtFnEALGy/MPU9150axis.png)
 
+Sample Data:
+![sample](/Documents/bluetooth.png)
+
 ### Computer End
 
 Use a USB bluetooth dongle
@@ -93,12 +104,13 @@ Two devices are called 'head' and 'hip'
 
 1. Use a terminal such as putty, teraterm, etc. Open a Serial connection 38400. Save to text file.
 2. Use Matlab code to log data and store in .mat files. 
+3. On your phone (https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&hl=en)
 
 ### Rescaling
 
 The numbers come back as signed 16bit integers, to scale them to their real values multiple by range of the sensor and divide by the range of 16 bit number, only 15 because we don't count the sign bit).
 
-Acceleration * 2000/(2^15) (units are now mg where 1g is the earths gravity)
+Acceleration * 2000/(2^15) (units are now mg where 1000mg = 1g is the earths gravity)
 
 Gyroscope * 250/(2^15) (units are now degress per second)
 
