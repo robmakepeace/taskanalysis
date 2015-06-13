@@ -2,19 +2,19 @@
 Undergraduate Thesis 2015 - Head Movement In Task Analysis
 
 ## Documentation
-[Thesis (complete)](Documents/thesis.pdf)
+[Thesis (complete)](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/thesis.pdf)
 
-[Poster](Documents/poster.pdf)
+[Poster](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/poster.pdf)
 
 Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movement″, to appear in Proc. IEEE Engineering in Medicine and Biology Conference (Milan, Italy), 2015.
 
-[Four Page Paper](Documents/embspaperDRAFT.pdf)
+[Four Page Paper](https://github.com/robmakepeace/taskanalysis/Documents/embspaperDRAFT.pdf)
 
 ## Database
 
 ## Hardware
 
-![Photo](Documents/package.jpg)
+![Photo](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/package.jpg)
 
 Device Prototype (From Left to Right: Bluetooth, IMU, Microcontroller)
 
@@ -36,15 +36,15 @@ Pinout:
 
 IMU -> Arduino on I2C (accelgyro.initialize(); accelgyro.getMotion9(&ax, &ay, &az, &gx, &gy, &gz, &mx, &my, &mz);)
 
-[Datasheet](Documents/PS-MPU-9150A.pdf)
+[Datasheet](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/PS-MPU-9150A.pdf)
 
 Arduino -> Bluetooth on Serial (baud 38400 bits/sec) (Note: Arduino has two serial connections "Serial" is the usb back to the pc, "Serial1" is on pins 0 & 1)
 
-[Datasheet](Documents/bluetooth hc06.pdf)
+[Datasheet](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/bluetooth hc06.pdf)
 
 The battery voltage is 3.7V, it is input into the RAW pin on the arduino to make 3.3V that is used for everything else.
 
-### [Accel.ino](Arduino/Accel.ino)
+### [Accel.ino](https://github.com/robmakepeace/taskanalysis/blob/master/Arduino/Accel.ino)
 Application Software The application layer was modified by the author from existing code by Jeff Rowberg (https://github.com/jrowberg). The file calls the functions from the MPU-9150 library and prints the information over the USB or bluetooth communications channels. The application software le is available at: (https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino).
 
 Sensor Library The sensor library was developed by Jeff Rowberg for the sister sensor MPU-6050. The code is publicly available at: (https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050). The code was slightly modified by Sparkfun for usage with the MPU-9150 and is publicly available at: (https://github.com/sparkfun/MPU-9150_Breakout/tree/master/firmware).
@@ -95,7 +95,7 @@ each packet conatins one line of ten values seperated by spaces
 ![axes](http://api.ning.com/files/ujcza9N5GbLOvcS-JInsBpRV0AGAiG*gDri3wvh0kL-jjJzfmOtNXME8M7vBNz8D6n09ZRxZll248F4SEgNWnVYvtFnEALGy/MPU9150axis.png)
 
 Sample Data:
-![sample](/Documents/Bluetooth_screenshot.png)
+![sample](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/Bluetooth_screenshot.png)
 
 ### Computer End
 
@@ -121,21 +121,21 @@ Acceleration * 1200/(2^15) (units are now uT)
 These are really rough and not really consistent. 
 The code was developed and tested on Matlab R2013a
 
-### [go.m](Matlab/go.m)
+### [go.m](https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/go.m)
 connects to bluetooth devices (names: 'head', 'hip')
 
 Inputs: none
 
 Outputs: array of bluetooth objects
 
-### [SetupBluetooth.m](Matlab/SetupBluetooth.m)
+### [SetupBluetooth.m](https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/SetupBluetooth.m)
 connects to bluetooth device
 
 Inputs: device name
 
 Outputs: bluetooth object
 
-### [logger.m](Matlab/logger.m)
+### [logger.m](https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/logger.m)
 logs data to .mat file. 
 
 Once logged it automatically does the scaling.
@@ -150,7 +150,7 @@ Inputs: array of bluetooth objects, number of samples, beep (not relevent here)
 
 Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
 
-### [realtime.m](Matlab/realtime.m)
+### [realtime.m](https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/realtime.m)
 real time plotting and logging.
 
 Uses 'b' command requiring acknowledgement before next packet.
@@ -161,7 +161,7 @@ Inputs: bluetooth object
 
 Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
 
-### [realtime2.m](Matlab/realtime2.m)
+### [realtime2.m](https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/realtime2.m)
 same as realtime but two devices.
 
 Inputs: first bluetooth object, second bluetooth object
