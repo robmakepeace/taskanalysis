@@ -119,6 +119,7 @@ Acceleration * 1200/(2^15) (units are now uT)
 ## Matlab Code
 
 These are really rough and not really consistent. 
+The code was developed and tested on Matlab R2013a
 
 ### go.m
 connects to bluetooth devices (names: 'head', 'hip')
