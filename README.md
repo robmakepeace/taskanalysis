@@ -28,7 +28,7 @@ Device Prototype (From Left to Right: Bluetooth, IMU, Microcontroller)
 |Battery Charger  | LiPo Charger Basic - Micro- USB | Sparkfun             | $8  | https://www.sparkfun.com/products/10718   |
 |Veriboard        | prototyping board               | CREATE UNSW          | $2  | http://www.createunsw.com.au/partSale.php |
 
-### Arduino Pro Micro
+## Arduino Pro Micro
 Getting started guide: https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide
 
 Pinout:
@@ -44,7 +44,7 @@ Arduino -> Bluetooth on Serial (baud 38400 bits/sec) (Note: Arduino has two seri
 
 The battery voltage is 3.7V, it is input into the RAW pin on the arduino to make 3.3V that is used for everything else.
 
-### Arduino Code
+### [Accel.ino](Arduino/Accel.ino)
 Application Software The application layer was modified by the author from existing code by Jeff Rowberg (https://github.com/jrowberg). The file calls the functions from the MPU-9150 library and prints the information over the USB or bluetooth communications channels. The application software le is available at: (https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino).
 
 Sensor Library The sensor library was developed by Jeff Rowberg for the sister sensor MPU-6050. The code is publicly available at: (https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050). The code was slightly modified by Sparkfun for usage with the MPU-9150 and is publicly available at: (https://github.com/sparkfun/MPU-9150_Breakout/tree/master/firmware).
@@ -121,21 +121,21 @@ Acceleration * 1200/(2^15) (units are now uT)
 These are really rough and not really consistent. 
 The code was developed and tested on Matlab R2013a
 
-### go.m
+### [go.m](Matlab/go.m)
 connects to bluetooth devices (names: 'head', 'hip')
 
 Inputs: none
 
 Outputs: array of bluetooth objects
 
-### SetupBluetooth.m
+### [SetupBluetooth.m](Matlab/SetupBluetooth.m)
 connects to bluetooth device
 
 Inputs: device name
 
 Outputs: bluetooth object
 
-### logger.m
+### [logger.m](Matlab/logger.m)
 logs data to .mat file. 
 
 Once logged it automatically does the scaling.
@@ -150,7 +150,7 @@ Inputs: array of bluetooth objects, number of samples, beep (not relevent here)
 
 Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
 
-### realtime.m
+### [realtime.m](Matlab/realtime.m)
 real time plotting and logging.
 
 Uses 'b' command requiring acknowledgement before next packet.
@@ -161,7 +161,7 @@ Inputs: bluetooth object
 
 Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
 
-### realtime2.m
+### [realtime2.m](Matlab/realtime2.m)
 same as realtime but two devices.
 
 Inputs: first bluetooth object, second bluetooth object
