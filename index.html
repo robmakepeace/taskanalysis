@@ -32,10 +32,6 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="home" class="anchor" href="#home" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://robmakepeace.github.io/">Home</a>
-</h1>
-
-<h1>
 <a id="taskanalysis" class="anchor" href="#taskanalysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>taskanalysis</h1>
 
 <p>Undergraduate Thesis 2015 - Head Movement In Task Analysis</p>
@@ -43,13 +39,13 @@
 <h2>
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
-<p><a href="Documents/thesis.pdf">Thesis (complete)</a></p>
+<p><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/thesis.pdf">Thesis (complete)</a></p>
 
-<p><a href="Documents/poster.pdf">Poster</a></p>
+<p><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/poster.pdf">Poster</a></p>
 
 <p>Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movement″, to appear in Proc. IEEE Engineering in Medicine and Biology Conference (Milan, Italy), 2015.</p>
 
-<p><a href="Documents/embspaperDRAFT.pdf">Four Page Paper</a></p>
+<p><a href="https://github.com/robmakepeace/taskanalysis/Documents/embspaperDRAFT.pdf">Four Page Paper</a></p>
 
 <h2>
 <a id="database" class="anchor" href="#database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database</h2>
@@ -57,7 +53,7 @@
 <h2>
 <a id="hardware" class="anchor" href="#hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware</h2>
 
-<p><img src="Documents/package.jpg" alt="Photo"></p>
+<p><img src="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/package.jpg" alt="Photo"></p>
 
 <p>Device Prototype (From Left to Right: Bluetooth, IMU, Microcontroller)</p>
 
@@ -130,16 +126,16 @@
 
 <p>IMU -&gt; Arduino on I2C (accelgyro.initialize(); accelgyro.getMotion9(&amp;ax, &amp;ay, &amp;az, &amp;gx, &amp;gy, &amp;gz, &amp;mx, &amp;my, &amp;mz);)</p>
 
-<p><a href="Documents/PS-MPU-9150A.pdf">Datasheet</a></p>
+<p><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/PS-MPU-9150A.pdf">Datasheet</a></p>
 
 <p>Arduino -&gt; Bluetooth on Serial (baud 38400 bits/sec) (Note: Arduino has two serial connections "Serial" is the usb back to the pc, "Serial1" is on pins 0 &amp; 1)</p>
 
-<p><a href="Documents/bluetooth%20hc06.pdf">Datasheet</a></p>
+<p><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/bluetooth%20hc06.pdf">Datasheet</a></p>
 
 <p>The battery voltage is 3.7V, it is input into the RAW pin on the arduino to make 3.3V that is used for everything else.</p>
 
 <h3>
-<a id="accelino" class="anchor" href="#accelino" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Arduino/Accel.ino">Accel.ino</a>
+<a id="accelino" class="anchor" href="#accelino" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Arduino/Accel.ino">Accel.ino</a>
 </h3>
 
 <p>Application Software The application layer was modified by the author from existing code by Jeff Rowberg (<a href="https://github.com/jrowberg">https://github.com/jrowberg</a>). The file calls the functions from the MPU-9150 library and prints the information over the USB or bluetooth communications channels. The application software le is available at: (<a href="https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino">https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino</a>).</p>
@@ -195,7 +191,7 @@
 <p><img src="http://api.ning.com/files/ujcza9N5GbLOvcS-JInsBpRV0AGAiG*gDri3wvh0kL-jjJzfmOtNXME8M7vBNz8D6n09ZRxZll248F4SEgNWnVYvtFnEALGy/MPU9150axis.png" alt="axes"></p>
 
 <p>Sample Data:
-<img src="/Documents/Bluetooth_screenshot.png" alt="sample"></p>
+<img src="https://github.com/robmakepeace/taskanalysis/blob/master/Documents/Bluetooth_screenshot.png" alt="sample"></p>
 
 <h3>
 <a id="computer-end" class="anchor" href="#computer-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer End</h3>
@@ -227,7 +223,7 @@ Two devices are called 'head' and 'hip'</p>
 The code was developed and tested on Matlab R2013a</p>
 
 <h3>
-<a id="gom" class="anchor" href="#gom" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Matlab/go.m">go.m</a>
+<a id="gom" class="anchor" href="#gom" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/go.m">go.m</a>
 </h3>
 
 <p>connects to bluetooth devices (names: 'head', 'hip')</p>
@@ -237,7 +233,7 @@ The code was developed and tested on Matlab R2013a</p>
 <p>Outputs: array of bluetooth objects</p>
 
 <h3>
-<a id="setupbluetoothm" class="anchor" href="#setupbluetoothm" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Matlab/SetupBluetooth.m">SetupBluetooth.m</a>
+<a id="setupbluetoothm" class="anchor" href="#setupbluetoothm" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/SetupBluetooth.m">SetupBluetooth.m</a>
 </h3>
 
 <p>connects to bluetooth device</p>
@@ -247,7 +243,7 @@ The code was developed and tested on Matlab R2013a</p>
 <p>Outputs: bluetooth object</p>
 
 <h3>
-<a id="loggerm" class="anchor" href="#loggerm" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Matlab/logger.m">logger.m</a>
+<a id="loggerm" class="anchor" href="#loggerm" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/logger.m">logger.m</a>
 </h3>
 
 <p>logs data to .mat file. </p>
@@ -265,7 +261,7 @@ The code was developed and tested on Matlab R2013a</p>
 <p>Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)</p>
 
 <h3>
-<a id="realtimem" class="anchor" href="#realtimem" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Matlab/realtime.m">realtime.m</a>
+<a id="realtimem" class="anchor" href="#realtimem" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/realtime.m">realtime.m</a>
 </h3>
 
 <p>real time plotting and logging.</p>
@@ -279,7 +275,7 @@ The code was developed and tested on Matlab R2013a</p>
 <p>Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)</p>
 
 <h3>
-<a id="realtime2m" class="anchor" href="#realtime2m" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="Matlab/realtime2.m">realtime2.m</a>
+<a id="realtime2m" class="anchor" href="#realtime2m" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/robmakepeace/taskanalysis/blob/master/Matlab/realtime2.m">realtime2.m</a>
 </h3>
 
 <p>same as realtime but two devices.</p>
