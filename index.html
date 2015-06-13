@@ -1,15 +1,294 @@
 <!DOCTYPE html>
 <html>
-<title>
-Robert Makepeace
-</title>
-<body>
-<h1>Head Movement In Task Analysis</h1>
-<h2>Stuff</h2>
-<p>
-<a href="http://robmakepeace.github.io">Home</a>
-<a href="../">Home</a>
-<a href="../index.html">Home</a>
-</p>
-</body>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Taskanalysis : Undergraduate Thesis - Head Tracking In Task Analysis">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Taskanalysis</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/robmakepeace/taskanalysis">View on GitHub</a>
+
+          <h1 id="project_title">Taskanalysis</h1>
+          <h2 id="project_tagline">Undergraduate Thesis - Head Tracking In Task Analysis</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/robmakepeace/taskanalysis/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/robmakepeace/taskanalysis/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="taskanalysis" class="anchor" href="#taskanalysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>taskanalysis</h1>
+
+<p>Undergraduate Thesis 2015 - Head Movement In Task Analysis</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p><a href="Documents/thesis.pdf">Thesis (complete)</a></p>
+
+<p><a href="Documents/poster.pdf">Poster</a></p>
+
+<p>Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movement″, to appear in Proc. IEEE Engineering in Medicine and Biology Conference (Milan, Italy), 2015.</p>
+
+<p><a href="Documents/embspaperDRAFT.pdf">Four Page Paper</a></p>
+
+<h2>
+<a id="database" class="anchor" href="#database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database</h2>
+
+<h2>
+<a id="hardware" class="anchor" href="#hardware" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware</h2>
+
+<p><img src="Documents/package.jpg" alt="Photo"></p>
+
+<p>Device Prototype (From Left to Right: Bluetooth, IMU, Microcontroller)</p>
+
+<h3>
+<a id="bill-of-materials" class="anchor" href="#bill-of-materials" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bill of Materials</h3>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Part Number</th>
+<th>Manufacturer</th>
+<th>Cost</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IMU</td>
+<td>MPU-9150 breakout board</td>
+<td>Invensense/ Sparkfun</td>
+<td>$35</td>
+<td><a href="https://www.sparkfun.com/products/11486">https://www.sparkfun.com/products/11486</a></td>
+</tr>
+<tr>
+<td>Microcontroller</td>
+<td>Arduino Pro Micro 3v3</td>
+<td>Sparkfun</td>
+<td>$20</td>
+<td><a href="https://www.sparkfun.com/products/12587">https://www.sparkfun.com/products/12587</a></td>
+</tr>
+<tr>
+<td>Bluetooth Module</td>
+<td>HC06</td>
+<td>CREATE UNSW</td>
+<td>$10</td>
+<td><a href="http://www.createunsw.com.au/partSale.php">http://www.createunsw.com.au/partSale.php</a></td>
+</tr>
+<tr>
+<td>Battery Polymer</td>
+<td>Lithium Ion Battery - 400mAh</td>
+<td>Sparkfun</td>
+<td>$7</td>
+<td><a href="https://www.sparkfun.com/products/10718">https://www.sparkfun.com/products/10718</a></td>
+</tr>
+<tr>
+<td>Battery Charger</td>
+<td>LiPo Charger Basic - Micro- USB</td>
+<td>Sparkfun</td>
+<td>$8</td>
+<td><a href="https://www.sparkfun.com/products/10718">https://www.sparkfun.com/products/10718</a></td>
+</tr>
+<tr>
+<td>Veriboard</td>
+<td>prototyping board</td>
+<td>CREATE UNSW</td>
+<td>$2</td>
+<td><a href="http://www.createunsw.com.au/partSale.php">http://www.createunsw.com.au/partSale.php</a></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="arduino-pro-micro" class="anchor" href="#arduino-pro-micro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arduino Pro Micro</h3>
+
+<p>Getting started guide: <a href="https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide">https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide</a></p>
+
+<p>Pinout:
+<img src="https://cdn.sparkfun.com/r/600-600/assets/9/c/3/c/4/523a1765757b7f5c6e8b4567.png" alt="pinout"></p>
+
+<p>IMU -&gt; Arduino on I2C (accelgyro.initialize(); accelgyro.getMotion9(&amp;ax, &amp;ay, &amp;az, &amp;gx, &amp;gy, &amp;gz, &amp;mx, &amp;my, &amp;mz);)</p>
+
+<p><a href="Documents/PS-MPU-9150A.pdf">Datasheet</a></p>
+
+<p>Arduino -&gt; Bluetooth on Serial (baud 38400 bits/sec) (Note: Arduino has two serial connections "Serial" is the usb back to the pc, "Serial1" is on pins 0 &amp; 1)</p>
+
+<p><a href="Documents/bluetooth%20hc06.pdf">Datasheet</a></p>
+
+<p>The battery voltage is 3.7V, it is input into the RAW pin on the arduino to make 3.3V that is used for everything else.</p>
+
+<h3>
+<a id="arduino-code" class="anchor" href="#arduino-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arduino Code</h3>
+
+<p>Application Software The application layer was modified by the author from existing code by Jeff Rowberg (<a href="https://github.com/jrowberg">https://github.com/jrowberg</a>). The file calls the functions from the MPU-9150 library and prints the information over the USB or bluetooth communications channels. The application software le is available at: (<a href="https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino">https://www.dropbox.com/s/6fgxjy24ni8ih3e/Accel.ino</a>).</p>
+
+<p>Sensor Library The sensor library was developed by Jeff Rowberg for the sister sensor MPU-6050. The code is publicly available at: (<a href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050">https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050</a>). The code was slightly modified by Sparkfun for usage with the MPU-9150 and is publicly available at: (<a href="https://github.com/sparkfun/MPU-9150_Breakout/tree/master/firmware">https://github.com/sparkfun/MPU-9150_Breakout/tree/master/firmware</a>).</p>
+
+<p>I2C Library The library for I2C protocol was again developed by Jeff Rowberg and is available at: (<a href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev">https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev</a>).</p>
+
+<h3>
+<a id="data-format" class="anchor" href="#data-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data format</h3>
+
+<p>on startup send command to control the output ('c' - Bluetooth text every 50ms is recommended)</p>
+
+<p>'a' - Bluetooth text as fast as possible</p>
+
+<p>'b' - Bluetooth text needs acknowledgement</p>
+
+<p>'c' - Bluetooth text every 50ms</p>
+
+<p>'d' - Bluetooth binary as fast as possible</p>
+
+<p>'e' - Bluetooth binary needs acknowledgement</p>
+
+<p>'f' - Bluetooth binary every 50ms</p>
+
+<p>'g' - USB text as fast as possible</p>
+
+<p>'h' - USB text needs acknowledgement</p>
+
+<p>'i' - USB text every 50ms</p>
+
+<p>'j' - USB binary as fast as possible</p>
+
+<p>'k' - USB binary needs acknowledgement</p>
+
+<p>'l' - USB binary every 50ms</p>
+
+<p>each packet conatins one line of ten values seperated by spaces</p>
+
+<ol>
+<li>time(ms) since start up</li>
+<li>Acceleration X Axis </li>
+<li>Acceleration Y Axis </li>
+<li>Acceleration Z Axis </li>
+<li>Gyroscope X Axis </li>
+<li>Gyroscope Y Axis </li>
+<li>Gyroscope Z Axis </li>
+<li>Compass X Axis </li>
+<li>Compass Y Axis </li>
+<li>Compass Z Axis </li>
+</ol>
+
+<p><img src="http://api.ning.com/files/ujcza9N5GbLOvcS-JInsBpRV0AGAiG*gDri3wvh0kL-jjJzfmOtNXME8M7vBNz8D6n09ZRxZll248F4SEgNWnVYvtFnEALGy/MPU9150axis.png" alt="axes"></p>
+
+<p>Sample Data:
+<img src="/Documents/Bluetooth_screenshot.png" alt="sample"></p>
+
+<h3>
+<a id="computer-end" class="anchor" href="#computer-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer End</h3>
+
+<p>Use a USB bluetooth dongle
+Two devices are called 'head' and 'hip'</p>
+
+<ol>
+<li>Use a terminal such as putty, teraterm, etc. Open a Serial connection 38400. Save to text file.</li>
+<li>Use Matlab code to log data and store in .mat files. </li>
+<li>On your phone (<a href="https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&amp;hl=en">https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&amp;hl=en</a>)</li>
+</ol>
+
+<h3>
+<a id="rescaling" class="anchor" href="#rescaling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rescaling</h3>
+
+<p>The numbers come back as signed 16bit integers, to scale them to their real values multiple by range of the sensor and divide by the range of 16 bit number, only 15 because we don't count the sign bit).</p>
+
+<p>Acceleration * 2000/(2^15) (units are now mg where 1000mg = 1g is the earths gravity)</p>
+
+<p>Gyroscope * 250/(2^15) (units are now degress per second)</p>
+
+<p>Acceleration * 1200/(2^15) (units are now uT)</p>
+
+<h2>
+<a id="matlab-code" class="anchor" href="#matlab-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matlab Code</h2>
+
+<p>These are really rough and not really consistent. 
+The code was developed and tested on Matlab R2013a</p>
+
+<h3>
+<a id="gom" class="anchor" href="#gom" aria-hidden="true"><span class="octicon octicon-link"></span></a>go.m</h3>
+
+<p>connects to bluetooth devices (names: 'head', 'hip')</p>
+
+<p>Inputs: none</p>
+
+<p>Outputs: array of bluetooth objects</p>
+
+<h3>
+<a id="setupbluetoothm" class="anchor" href="#setupbluetoothm" aria-hidden="true"><span class="octicon octicon-link"></span></a>SetupBluetooth.m</h3>
+
+<p>connects to bluetooth device</p>
+
+<p>Inputs: device name</p>
+
+<p>Outputs: bluetooth object</p>
+
+<h3>
+<a id="loggerm" class="anchor" href="#loggerm" aria-hidden="true"><span class="octicon octicon-link"></span></a>logger.m</h3>
+
+<p>logs data to .mat file. </p>
+
+<p>Once logged it automatically does the scaling.</p>
+
+<p>Sends command 'c' to arduino. </p>
+
+<p>Receives 20 packets per second.</p>
+
+<p>number of samples it will run for (# seconds * 20s amples/seconds)</p>
+
+<p>Inputs: array of bluetooth objects, number of samples, beep (not relevent here)</p>
+
+<p>Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)</p>
+
+<h3>
+<a id="realtimem" class="anchor" href="#realtimem" aria-hidden="true"><span class="octicon octicon-link"></span></a>realtime.m</h3>
+
+<p>real time plotting and logging.</p>
+
+<p>Uses 'b' command requiring acknowledgement before next packet.</p>
+
+<p>graphing slows it down a lot</p>
+
+<p>Inputs: bluetooth object</p>
+
+<p>Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)</p>
+
+<h3>
+<a id="realtime2m" class="anchor" href="#realtime2m" aria-hidden="true"><span class="octicon octicon-link"></span></a>realtime2.m</h3>
+
+<p>same as realtime but two devices.</p>
+
+<p>Inputs: first bluetooth object, second bluetooth object</p>
+
+<p>Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Taskanalysis maintained by <a href="https://github.com/robmakepeace">robmakepeace</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
