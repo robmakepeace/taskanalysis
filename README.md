@@ -117,3 +117,29 @@ Gyroscope * 250/(2^15) (units are now degress per second)
 Acceleration * 1200/(2^15) (units are now uT)
 
 ## Matlab Code
+
+These are really rough and not really consistent. 
+
+### go.m
+connects to bluetooth devices (names: 'head', 'hip')
+Inputs: none
+Outputs: array of bluetooth objects
+
+### SetupBluetooth.m
+connects to bluetooth device
+Inputs: device name
+Outputs: bluetooth object
+
+### logger.m
+logs data to .mat file. 
+Once logged it automatically does the scaling.
+Sends command 'c' to arduino. 
+Receives 20 packets per second.
+number of samples it will run for (# seconds * 20s amples/seconds)
+Inputs: array of bluetooth objects, number of samples, beep (not relevent here)
+Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
+
+### realtime2.m
+same as realtime but two devices.
+Inputs: first bluetooth object, second bluetooth object
+Outputs: none (saves data file to local directory in date format yyyy_mm_dd_hh_mm.mat, eg 2014_4_11_17_53.mat)
