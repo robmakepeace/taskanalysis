@@ -1,0 +1,12 @@
+function my_struct = make_struct(time,ax,ay,az,gx,gy,gz,mx,my,mz);
+field1 = 'time';  value1 = time;
+field2 = 'AX';  value2 = ax;
+field3 = 'AY';  value3 = ay;
+field4 = 'AZ';  value4 = az;
+field5 = 'GX';  value5 = gx;
+field6 = 'GY';  value6 = gy;
+field7 = 'GZ';  value7 = gz;
+field8 = 'MX';  value8 = mx;
+field9 = 'MY';  value9 = my;
+field10 = 'MZ';  value10 = mz;
+my_struct = struct( field1,value1, field2,value2, field3,value3,field4,value4,field5,value5,field6,value6,field7,value7,field8,value8,field9,value9,field10,value10);
