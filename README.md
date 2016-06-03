@@ -6,10 +6,9 @@ Undergraduate Thesis 2015 - Head Movement In Task Analysis
 
 [Poster](https://github.com/robmakepeace/taskanalysis/blob/master/Documents/poster.pdf)
 
-Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movement″, to appear in Proc. IEEE Engineering in Medicine and Biology Conference (Milan, Italy), 2015.
+Makepeace, R. W., and Epps, J., ″Automatic Task Analysis Based on Head Movement″, to appear in Proc. IEEE Engineering in Medicine and Biology Conference (Milan, Italy), 2015. [Four Page Paper](https://github.com/robmakepeace/taskanalysis/Documents/embspaperDRAFT.pdf)
 
-[Four Page Paper](https://github.com/robmakepeace/taskanalysis/Documents/embspaperDRAFT.pdf)
-
+[New Scientist Paper](https://github.com/robmakepeace/taskanalysis/Documents/New Scientist.pdf)
 ## Database
 
 ## Hardware
